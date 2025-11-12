@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "705755055287",
+    "project_id": "sianonrid",
+    "storage_bucket": "sianonrid.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705755055287:android:aa61371dbed7758685b932",
+        "android_client_info": {
+          "package_name": "com.example.sianonrid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdR_FtQ9Npa2QQYk-3lDVhEgviJHm-CbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
