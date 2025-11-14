@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Views.stater.RegisterFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:gravity="center"
+        android:text="Welcome To NINJASHOP"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="#009688"
+        android:layout_margin="@dimen/_32sdp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="@dimen/_8sdp"
+        app:endIconMode="clear_text"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User email"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_email"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="@dimen/_8sdp"
+        app:endIconMode="password_toggle"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User password"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_passwoed"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 1"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 2"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 3"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/Widget.Material3.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:fontFamily="@font/poppins"
+        android:text="User Registration"
+        android:textStyle="bold"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:fontFamily="@font/poppins"
+        android:text="Already have an a account"
+        android:textStyle="bold"
+        app:strokeColor="#17B86B"
+
+        />
+
+</LinearLayout>
