@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_32sdp"
         android:fontFamily="@font/poppins"
-        android:text="New User?"
+        android:text="REGISTER"
         android:textStyle="bold"
         app:strokeColor="#17B86B"
 

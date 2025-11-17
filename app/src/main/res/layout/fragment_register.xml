@@ -57,7 +57,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_passwoed"
+            android:id="@+id/et_password"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,35 +69,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btn_customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button 1"
+            android:text="Customer"
             style="?attr/materialButtonOutlinedStyle"
             />
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_seller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button 2"
+            android:text="Seller"
             style="?attr/materialButtonOutlinedStyle"
             />
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button 3"
-            style="?attr/materialButtonOutlinedStyle"
-            />
+
+
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btn_Register"
         style="@style/Widget.Material3.Button.UnelevatedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_32sdp"
-        android:layout_marginTop="@dimen/_32sdp"
         android:fontFamily="@font/poppins"
         android:text="User Registration"
         android:textStyle="bold"
@@ -107,11 +101,12 @@
 
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btn_Login"
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:fontFamily="@font/poppins"
         android:text="Already have an a account"
         android:textStyle="bold"
