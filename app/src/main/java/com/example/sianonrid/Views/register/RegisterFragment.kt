@@ -1,23 +1,71 @@
 package com.example.sianonrid.Views.register
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.example.sianonrid.R
 
-class RegisterFragment : Fragment() {
+import android.widget.Toast
+import androidx.fragment.app.viewModels
+import com.example.sianonrid.base.Basefragment
+import com.example.sianonrid.core.DataState
+import com.example.sianonrid.databinding.FragmentRegisterBinding
+import com.example.sianonrid.db.models.UserRegistration
+import com.example.sianonrid.isEmpty
+import dagger.hilt.android.AndroidEntryPoint
+import kotlin.getValue
+
+@AndroidEntryPoint
+class RegisterFragment : Basefragment<FragmentRegisterBinding>
+    (FragmentRegisterBinding::inflate) {
+
+    private val  viewModel: RegistrationViewModel by viewModels ()
 
 
+    override fun setListener() {
+        with(binding){
+            btnRegister.setOnClickListener {
+                etName.isEmpty()
+                etEmail.isEmpty()
+                etPassword.isEmpty()
+                if (!etName.isEmpty()&&!etEmail.isEmpty()&&!etPassword.isEmpty())
+                    Toast.makeText(context,"All input done...", Toast.LENGTH_LONG).show()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false)
+                val user= UserRegistration(
+                    etName.text.toString(),
+                    etEmail.text.toString(),
+                    etPassword.text.toString(),
+                    "Seller",
+                    ""
+
+                )
+                viewModel.userRegistration(user)
+                }
+             }
+
+          }
+      //OOAD->
+    override fun allObserver() {
+        rs()
     }
 
+    private fun rs() {
 
-    }
+               viewModel.rs.observe(viewLifecycleOwner){
+                   when(it){
+                       is DataState.Error -> {
+                           loading.dismiss()
+                           Toast.makeText(context,it.message, Toast.LENGTH_SHORT).show()
+                       }
+                       is DataState.Loading ->{
+                           loading.show()
+                           Toast.makeText(context,"Loading...", Toast.LENGTH_SHORT).show()
+                       }
+                       is DataState.Success -> {
+                           loading.dismiss()
+                           Toast.makeText(context,"create User:${it.data}", Toast.LENGTH_SHORT).show()
+                       }
+                   }
+               }
+
+
+       }
+
+
+}

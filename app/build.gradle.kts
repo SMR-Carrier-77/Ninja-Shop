@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.android.hilt.dagger)
+    kotlin("kapt")
 }
 
 android {
@@ -67,4 +69,7 @@ dependencies {
 
     //lottie
     implementation(libs.lottie)
+    //dagger hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compoler)
 }

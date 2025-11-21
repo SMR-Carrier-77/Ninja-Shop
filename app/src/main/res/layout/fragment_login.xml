@@ -7,12 +7,14 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".Views.login.LoginFragment">
-    <ImageView
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:src="@mipmap/ic_launcher_foreground"
-        android:layout_gravity="center"
-        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        app:lottie_rawRes="@raw/log_in"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -24,24 +26,6 @@
         android:textColor="#009688"
         android:layout_margin="@dimen/_32sdp"
         />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_margin="@dimen/_8sdp"
-        app:endIconMode="clear_text"
-        android:layout_marginHorizontal="@dimen/_32sdp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="User name"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_name"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
