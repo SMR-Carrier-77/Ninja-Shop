@@ -14,7 +14,7 @@ import jakarta.inject.Inject
 
 @HiltViewModel
 class RegistrationViewModel@Inject constructor(
-    private val authService: AuthService
+    private val authService: AuthRepository
 ): ViewModel() {
    private val registrationResponse= MutableLiveData<DataState<UserRegistration>>()
     val rs: LiveData<DataState<UserRegistration>> =registrationResponse
