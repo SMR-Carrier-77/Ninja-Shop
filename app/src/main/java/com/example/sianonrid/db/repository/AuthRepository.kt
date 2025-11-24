@@ -1,14 +1,18 @@
 package com.example.sianonrid.db.repository
 
+import com.example.sianonrid.core.Nodes
+import com.example.sianonrid.db.models.UserLogin
 import com.example.sianonrid.db.models.UserRegistration
 import com.example.sianonrid.db.services.AuthService
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import javax.inject.Inject
 
 class AuthRepository@Inject constructor(
-    private val jAuth: FirebaseAuth
+    private val jAuth: FirebaseAuth,
+    private val db: FirebaseFirestore
 ): AuthService {
     override fun userRegistration(user: UserRegistration) : Task<AuthResult> {
 
@@ -16,11 +20,17 @@ class AuthRepository@Inject constructor(
       return jAuth.createUserWithEmailAndPassword(user.email,user.password)
     }
 
-    override fun userLogin() {
+    override fun userLogin(userLogin: UserLogin): Task<AuthResult> {
 
+        return jAuth.signInWithEmailAndPassword(userLogin.email,userLogin.password)
     }
 
-    override fun create(user: UserRegistration) {
+
+    override fun createUser(user: UserRegistration): Task<Void> {
+
+        return db.collection(Nodes.USER).document(user.userID).set(user)
+
+
 
     }
 

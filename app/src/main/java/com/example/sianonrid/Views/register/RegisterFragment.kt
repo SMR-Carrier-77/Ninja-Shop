@@ -1,8 +1,10 @@
 package com.example.sianonrid.Views.register
 
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import com.example.sianonrid.Views.dasboard.seller.SellerDashboard
 import com.example.sianonrid.base.Basefragment
 import com.example.sianonrid.core.DataState
 import com.example.sianonrid.databinding.FragmentRegisterBinding
@@ -60,6 +62,8 @@ class RegisterFragment : Basefragment<FragmentRegisterBinding>
                        is DataState.Success -> {
                            loading.dismiss()
                            Toast.makeText(context,"create User:${it.data}", Toast.LENGTH_SHORT).show()
+                           startActivity(Intent(requireContext(), SellerDashboard::class.java))
+                           requireActivity().finish()
                        }
                    }
                }

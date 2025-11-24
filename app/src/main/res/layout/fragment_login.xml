@@ -64,14 +64,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btn_Login"
         style="@style/Widget.Material3.Button.UnelevatedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_32sdp"
         android:layout_marginTop="@dimen/_32sdp"
         android:fontFamily="@font/poppins"
-        android:text="Register"
+        android:text="Log In"
         android:textStyle="bold"
 
         />
@@ -79,7 +79,7 @@
 
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btn_Register"
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
