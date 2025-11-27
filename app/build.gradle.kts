@@ -72,4 +72,7 @@ dependencies {
     //dagger hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compoler)
+
+    //imagePicker
+    implementation(libs.imagePicker)
 }
